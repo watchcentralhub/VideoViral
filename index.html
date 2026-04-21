@@ -14,13 +14,33 @@
 }
 
 body {
+  <style>
+body {
   height: 100vh;
-  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  background: url('https://i.imgur.com/OtX8nDM.gif') no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
+  position: relative;
 }
+
+/* overlay biar tetap elegan */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+}
+
+/* konten di atas */
+.box {
+  position: relative;
+  z-index: 2;
+}
+</style>
 
 /* container */
 .box {
